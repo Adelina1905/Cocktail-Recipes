@@ -1,0 +1,23 @@
+@import 'config.css';
+
+body{
+    background: var(--body-bg-color);
+    color: var(--primary-text-color);
+    font-family: 'Star-crush', sans-serif;
+    position: relative;
+}
+
+.titlebar{
+    /* makes the region dragable */
+    position: absolute;
+    right: 0;
+    -webkit-app-region: drag;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.window-controls button{
+    /* makes the buttons clickable */
+    -webkit-app-region: no-drag
+}

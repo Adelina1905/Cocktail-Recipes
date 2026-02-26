@@ -1,12 +1,9 @@
 console.log('main process working');
 
 //electron module
-const electron = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 
-//requirering a submodule
-const app = electron.app;
 //module for window, for the UI
-const BrowserWindow = electron.BrowserWindow;
 
 //building a file path 
 const path = require("path");
@@ -21,8 +18,18 @@ function createWindow(){
     win = new BrowserWindow({
         width: 413,
         height: 509,
+        resizable: false,
+        maximizable: false,
+        //customisez trafic 
+        frame: false,
         titleBarStyle: 'hidden',
-        ...(process.platform !== 'darwin' ? { titleBarOverlay: true } : {})
+
+        webPreferences: {
+            // devTools: false,
+            nodeIntegration: true,
+            contextIsolation: false
+        }
+        // ...(process.platform !== 'darwin' ? { titleBarOverlay: true } : {})
     });
 
     //loading the html file inside the window
@@ -44,6 +51,12 @@ function createWindow(){
         win = null;  
     })
 }
+ipcMain.on('minimize-window', () => {
+    win.minimize();
+});
 
+ipcMain.on('close-window', () => {
+    win.close();
+});
 //running window instantiation
 app.on('ready', createWindow);

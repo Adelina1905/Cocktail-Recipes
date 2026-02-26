@@ -1,0 +1,15 @@
+:root{
+    --primary-bg-color: #F7BAB2;
+    --body-bg-color: #FDCBC3;
+    --primary-text-color: #A80000;
+    --button-color: #D3191A;
+    --button-shadow-color: #6B0B2A;
+}
+@font-face {
+  font-family: "Star-crush";
+  src: url("../../fonts/star-crush/Star\ Crush.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pixel-Art";
+  src: url("../../fonts/pixel-game/Pixel\ Game.otf") format("opentype");
+}

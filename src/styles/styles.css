@@ -9,8 +9,8 @@ body{
 
 .titlebar{
     /* makes the region dragable */
-    position: absolute;
-    right: 0;
+    /* position: absolute; */
+    /* right: 0; */
     -webkit-app-region: drag;
     display: flex;
     justify-content: flex-end;
@@ -19,5 +19,22 @@ body{
 
 .window-controls button{
     /* makes the buttons clickable */
-    -webkit-app-region: no-drag
+    
+    all: unset;
+    -webkit-app-region: no-drag;
+    width: 42px;
+    height: 40px;
+}
+
+.window-controls button img{
+    display: block;
+}
+
+.window-controls button:hover{
+    transform: translate(-5%, -5%);
+}
+.window-controls button:active{
+    transform: translate(5%, 5%);
+    /* Same as if we would use darken in scss */
+    /* background-color: hsl(from var(--body-bg-color) h s calc(l - 10)); */
 }

@@ -5,6 +5,7 @@ body{
     color: var(--primary-text-color);
     font-family: 'Star-crush', sans-serif;
     position: relative;
+    overflow: hidden;
 }
 
 .titlebar{
@@ -37,4 +38,27 @@ body{
     transform: translate(5%, 5%);
     /* Same as if we would use darken in scss */
     /* background-color: hsl(from var(--body-bg-color) h s calc(l - 10)); */
+}
+.text{
+    /* position: absolute; */
+    /* top: 0; */
+    font-weight: 100;
+}
+.text h2{
+    font-size: 52px;
+}
+.text h1{
+    font-size: 66px;
+}
+.pixel-frame{
+    /* position: absolute;
+    top: 1%;
+    right: 0; */
+    border: 16px solid transparent;
+    
+    border-image: url("../../images/border-img.png") 16 stretch;
+    height: 300px;
+    width: 100px;
+    background-image: url("../../images/bg-strawberry.png");
+
 }

@@ -40,25 +40,57 @@ body{
     /* background-color: hsl(from var(--body-bg-color) h s calc(l - 10)); */
 }
 .text{
-    /* position: absolute; */
-    /* top: 0; */
+    position: absolute;
+    top: 30px;
     font-weight: 100;
+    margin-left: 10px;
+}
+.title, .title-recipe{
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin: 0;
 }
 .text h2{
-    font-size: 52px;
+    font-size: 60px;
 }
 .text h1{
-    font-size: 66px;
+    font-size: 70px;
+    margin-top: -10px;
 }
-.pixel-frame{
-    /* position: absolute;
-    top: 1%;
-    right: 0; */
-    border: 16px solid transparent;
-    
-    border-image: url("../../images/border-img.png") 16 stretch;
-    height: 300px;
-    width: 100px;
-    background-image: url("../../images/bg-strawberry.png");
 
+.pixel-frame{
+    position: absolute;
+    top: 162px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 16px solid transparent; 
+    border-image: url("../../images/border-img.png") 16 stretch;
+    border-radius: 10px;
+    height: 280px;
+    width: 350px;
+    background-image: url("../../images/bg-strawb-small.png");
+    background-position: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start-btn{
+    height: 45px;
+    width: 100px;
+    text-align: center;
+    font-family: 'Star-crush', sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+    background-color: var(--body-bg-color);
+    color: var(--primary-text-color);
+    padding: 2px 7px;
+    border: 8px solid transparent;
+    border-image: url("../../images/border-img.png") 8 stretch;
+    border-radius: 15px;
+}
+.start-btn:hover{
+    background-color: hsl(from var(--body-bg-color) h s calc(l - 2));
+}
+.start-btn:active{
+    background-color: hsl(from var(--body-bg-color) h s calc(l - 4));
 }

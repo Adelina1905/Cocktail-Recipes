@@ -1,5 +1,5 @@
 @import 'config.css';
-
+@import 'menu.css';
 body{
     background: var(--body-bg-color);
     color: var(--primary-text-color);
@@ -20,7 +20,6 @@ body{
 
 .window-controls button{
     /* makes the buttons clickable */
-    
     all: unset;
     -webkit-app-region: no-drag;
     width: 42px;

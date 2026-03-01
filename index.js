@@ -25,9 +25,10 @@ function createWindow(){
         titleBarStyle: 'hidden',
 
         webPreferences: {
+            preload: path.join(__dirname, 'preload.js'),
             // devTools: false,
-            nodeIntegration: true,
-            contextIsolation: false
+            nodeIntegration: false,
+            contextIsolation: true
         }
         // ...(process.platform !== 'darwin' ? { titleBarOverlay: true } : {})
     });

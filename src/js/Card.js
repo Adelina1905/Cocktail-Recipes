@@ -9,7 +9,7 @@ export class Card{
         el.className = "cocktail-card";
 
         el.innerHTML = `
-        <a href = "Cocktail${this.id}.html">
+        <a href = "Cocktail.html">
          <img src = "../images/New(${this.id}).png" alt = "Image of ${this.type}" class = "cocktails"/>
             <h1 class = "cock-type">${this.type}</h1>
         </a>   

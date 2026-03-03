@@ -14,8 +14,9 @@ body{
     /* right: 0; */
     -webkit-app-region: drag;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .window-controls button{
@@ -92,4 +93,7 @@ body{
 }
 .start-btn:active{
     background-color: hsl(from var(--body-bg-color) h s calc(l - 4));
+}
+.back-btn{
+    margin-right: 60vw;
 }

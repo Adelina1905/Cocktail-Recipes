@@ -9,7 +9,7 @@ export class Card{
         el.className = "cocktail-card";
 
         el.innerHTML = `
-        <a href = "Cocktail.html">
+        <a href = "Cocktail.html?id=${this.id}">
          <img src = "../images/New(${this.id}).png" alt = "Image of ${this.type}" class = "cocktails"/>
             <h1 class = "cock-type">${this.type}</h1>
         </a>   
@@ -17,5 +17,4 @@ export class Card{
 
         return el;
     }
-    renderRecipe(){}
 }

@@ -1,5 +1,6 @@
 @import 'config.css';
 @import 'menu.css';
+@import 'windowControls.css';
 body{
     background: var(--body-bg-color);
     color: var(--primary-text-color);
@@ -8,37 +9,6 @@ body{
     overflow: hidden;
 }
 
-.titlebar{
-    /* makes the region dragable */
-    /* position: absolute; */
-    /* right: 0; */
-    -webkit-app-region: drag;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.window-controls button{
-    /* makes the buttons clickable */
-    all: unset;
-    -webkit-app-region: no-drag;
-    width: 42px;
-    height: 40px;
-}
-
-.window-controls button img{
-    display: block;
-}
-
-.window-controls button:hover{
-    transform: translate(-5%, -5%);
-}
-.window-controls button:active{
-    transform: translate(5%, 5%);
-    /* Same as if we would use darken in scss */
-    /* background-color: hsl(from var(--body-bg-color) h s calc(l - 10)); */
-}
 .text{
     position: absolute;
     top: 30px;
@@ -68,7 +38,7 @@ body{
     border-radius: 10px;
     height: 280px;
     width: 350px;
-    background-image: url("../../images/bg-strawb-small.png");
+    background-image: url("../../images/image\ 3.png");
     background-position: left;
     display: flex;
     justify-content: center;
@@ -96,4 +66,4 @@ body{
 }
 .back-btn{
     margin-right: 60vw;
-}
+} 

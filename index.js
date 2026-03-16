@@ -44,7 +44,7 @@ function createWindow(){
 
 
     //adds inspect in app mod
-    win.webContents.openDevTools();
+    // win.webContents.openDevTools();
     
     
     //handles closing of the app

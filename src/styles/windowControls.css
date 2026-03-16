@@ -1,0 +1,32 @@
+.titlebar{
+    -webkit-app-region: drag;
+    width: 100%;
+}
+.window-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.window-controls button{
+    /* makes the buttons clickable */
+    all: unset;
+    -webkit-app-region: no-drag;
+    width: 42px;
+    height: 40px;
+}
+
+.window-controls button img{
+    display: block;
+}
+
+.window-controls button:hover{
+    transform: translate(-5%, -5%);
+}
+.window-controls button:active{
+    transform: translate(5%, 5%);
+    /* Same as if we would use darken in scss */
+    /* background-color: hsl(from var(--body-bg-color) h s calc(l - 10)); */
+}

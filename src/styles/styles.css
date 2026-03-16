@@ -1,6 +1,7 @@
 @import 'config.css';
 @import 'menu.css';
 @import 'windowControls.css';
+@import 'recipe.css';
 body{
     background: var(--body-bg-color);
     color: var(--primary-text-color);

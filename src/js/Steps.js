@@ -11,12 +11,23 @@ export class Steps {
     this.el.className = "cocktail-recipe";
     this.el.innerHTML = `
       ${this.renderRecipe()}
-
-      <div class="card-container">
+      <div class = "recipe">
+        <div class = "card-container">
         ${this.renderCard()}
+        </div>
+        <div class = "arrow-container">
+          <button id="back-card-btn"><img src="../images/Arrow.png"alt="back button"></button>
+          <div class = "dots">
+          <img src="../images/dot.png"/>
+          <img src="../images/dot.png"/>
+          <img src="../images/dot.png"/>
+          </div>
+          <button id="front-card-btn"><img src="../images/arrow-f.png"alt="front button"></button>
+        <div>
+   
       </div>
-      <button id="back-card-btn"><img src="../images/Arrow.png"alt="back button"></button>
-      <button id="front-card-btn"><img src="../images/Arrow.png"alt="back button"></button>
+
+  
     `;
     this.cardContainer = this.el.querySelector(".card-container");
 
@@ -27,12 +38,11 @@ export class Steps {
   renderRecipe() {
     return `
       <div class = "title">
-          <img src = "../images/New(${this.id}).png" alt = "Image of ${this.type}" />
+          <img src = "../images/New(${this.id}).png" alt = "Image of ${this.type}" class = "image"/>
           <h1>${this.type}</h1>
       </div>
     `;
   }
-
   renderCard() {
     const sections = [
     this.recipe.ingredients,
@@ -52,7 +62,7 @@ export class Steps {
     return `
     <div class = "card">
       <h3 class="card-title">${title}</h3>
-      <ul>
+      <ul class = "list-recipe">
         ${list.map(data => `<li>${data}</li>`).join("")}    
       </ul>
     </div>
